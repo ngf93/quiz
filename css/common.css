@@ -1,0 +1,162 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    position: relative;
+    color: #000;
+}
+@media (max-width: 1199px){
+    body {font-size: 15px;}
+}
+@media (max-width: 991px){
+    body {font-size: 14px;}
+}
+@media (max-width: 575px){
+    body {font-size: 13px;}
+}
+
+
+a, a:hover, a:focus, a:active {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+    cursor: pointer;
+}
+.disable {
+    pointer-events: none;
+    cursor: default;
+}
+
+p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, ul, ol, dl {
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+
+/* FORMS CUSTOMIZATION */
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active, 
+textarea, textarea:hover, textarea:focus, textarea:active,
+select, select:hover, select:focus, select:active {outline: none;}
+
+/* placeholder stylization */
+input:-moz-placeholder, textarea:-moz-placeholder {color: #CBCBCB; font-weight: 400;}
+input::-moz-placeholder, textarea::-moz-placeholder {color: #CBCBCB; font-weight: 400;}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {color: #CBCBCB; font-weight: 400;}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {color: #CBCBCB; font-weight: 400;}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder {color: #CBCBCB; font-weight: 400;}
+input::placeholder, textarea::placeholder {color: #CBCBCB; font-weight: 400;}
+
+input[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+input, textarea, select {
+    border: none;
+    background-color: #f5f5f5;
+    border-radius: 0;
+    padding: .75em 1.5em;
+    width: 100%;
+    line-height: normal;
+    box-shadow: unset;
+}
+
+
+/* кнопки */
+button {
+    background: none;
+    border: none;
+    padding: unset;
+    display: block;
+}
+button:hover, button:focus, button:active {cursor: pointer;}
+.btn_main {
+    border-radius: 0;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    line-height: 1.1em;
+    padding: 1em 2em;
+    text-align: center;
+    font-weight: 500;
+    min-height: 2em;
+    transition: .5s;
+}
+.btn_main:hover, .btn_main:focus, .btn_main:active {cursor: pointer;}
+.btn_1 {
+    color: #fff;
+    background-color: blue;
+}
+.btn_1:hover, .btn_1:focus, .btn_1:active {
+    color: #fff;
+    background-color: navy;
+}
+
+
+/* TEXT STYLIZATION */
+h1 {
+    font-size: 3em;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 1em;
+}
+h2 {
+    text-align: left;
+    font-size: 2.5em;
+    font-weight: 500;
+    margin-bottom: .6em;
+}
+h3 {
+    text-align: left;
+    font-size: 2em;
+    font-weight: 600;
+    line-height: 1em;
+    margin-bottom: .6em;
+}
+h4 {
+    text-align: left;
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+
+
+.f_08 {font-size: .8em;}
+.f_09 {font-size: .9em;}
+.f_11 {font-size: 1.1em;}
+.f_12 {font-size: 1.2em;}
+.f_13 {font-size: 1.3em;}
+.f_14 {font-size: 1.4em;}
+.f_15 {font-size: 1.5em;}
+.f_16 {font-size: 1.6em;}
+.f_17 {font-size: 1.7em;}
+.f_18 {font-size: 1.8em;}
+.f_19 {font-size: 1.9em;}
+.f_20 {font-size: 2em;}
+.white {color:#fff;}
+.black {color: #000;}
+
+.fw_1 {font-weight: 100;} /* thin */
+.fw_2 {font-weight: 200;} /* extra-light */
+.fw_3 {font-weight: 300;} /* light */
+.fw_4 {font-weight: 400;} /* regular */
+.fw_5 {font-weight: 500;} /* medium */
+.fw_6 {font-weight: 600;} /* semi-bold */
+.fw_7 {font-weight: 700;} /* bold */
+.fw_8 {font-weight: 800;} /* extra-bold */
+.fw_9 {font-weight: 900;} /* black */
+.itlc {font-style: italic;}
+.norm {font-style: normal;}
+
+.lh_n {line-height: normal;}
+.bb_1 {border-bottom: 1px solid;}
+
+
+main {
+    height: 100vh;
+}
