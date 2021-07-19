@@ -1,3 +1,10 @@
+#quiz {font-size: 16px;}
+#quiz h2 {
+    text-align: left;
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 0.25em;
+}
 #quiz .modal-dialog {
     max-width: 1140px;
 }
@@ -66,9 +73,88 @@
 }
 #quiz-slider .btn-next {
     height: 2.5em;
-    padding: 0 2em;
+    padding: 0 3em;
     border-radius: 2.5em;
     background: linear-gradient(90deg, rgba(13, 71, 161, 0.8) 0%, #2196F3 57.72%);
     color: #fff;
     font-weight: 500;
 }
+
+
+#quiz-slider .indicators {
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+#quiz-slider .indicators div {
+    flex-grow: 1;
+    height: 5px;
+    max-width: 100px;
+    background-color: #E3F2FD;
+    margin-right: 10px;
+}
+#quiz-slider .indicators div.active {
+    background-color: #2196F3;
+}
+
+
+#quiz-form input {
+    background-color: transparent;
+    border-bottom: 2px solid #E0E0E0;
+}
+
+#quiz-form .elem-1 {position: relative;}
+#quiz-form input.trans{
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+#quiz-form input.trans:checked {
+    border: 2px solid #2196F3;
+}
+#quiz-form .elem-1 .visual-part {
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    /* position: relative;
+    z-index: 1; */
+}
+#quiz-form .elem-1 .visual-part>img {
+    width: 5em;
+    height: 4.25em;
+    background-color: #56CCF2;
+    border: 1px solid #56CCF2;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 1em;
+    object-fit: cover;
+}
+#quiz-form .elem-1 .visual-part>div {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#quiz-form .elem-1 .visual-part>div input {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
