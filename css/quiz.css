@@ -1,17 +1,37 @@
 #quiz {font-size: 16px;}
-#quiz h2 {
-    text-align: left;
-    font-size: 2em;
-    font-weight: 500;
-    margin-bottom: 0.25em;
+#quiz .f_15 {font-size: 1.5em;}
+#quiz .f_20 {font-size: 2em;}
+@media (max-width: 767px){
+    #quiz .f_15 {font-size: 1.25em;}
+    #quiz .f_20 {font-size: 1.75em;}
 }
+
 #quiz .modal-dialog {
-    max-width: 1140px;
+    width: 1140px;
+    max-width: calc(100% - 6.5em);
 }
+@media (max-width: 1199px){
+    #quiz {font-size: 15px;}
+    #quiz .modal-dialog {width: 960px;}
+}
+@media (max-width: 991px){
+    #quiz {font-size: 14px;}
+    #quiz .modal-dialog {width: 720px;}
+}
+@media (max-width: 767px){
+    #quiz {font-size: 13px;}
+    #quiz .modal-dialog {width: 540px;}
+}
+@media (max-width: 575px){
+    #quiz {font-size: 12px;}
+    #quiz .modal-dialog {width: 100%;}
+}
+
 #quiz .modal-content {
     border: none;
     background-color: transparent;
     position: relative;
+    /* max-height: 100%; */
 }
 #quiz .modal-content .btn-close {
     position: absolute;
@@ -36,21 +56,78 @@
     stroke-linejoin: round;
 }
 
+
 #quiz-form {
     background: #FFFFFF;
     border-radius: 10px;
-    height: 800px;
+    height: 750px;
+    max-height: calc(100vh - 6.5em);
 }
-#quiz-form .right {
+#quiz-form h2, #quiz-form legend {
+    text-align: left;
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 0.25em;
+}
+/*****************
+SCROLL STYLIZATION
+******************/
+#quiz-form .left-side,
+#quiz-form .right-side {
+    scrollbar-color: #2197F4 #E3F2FD;
+    scrollbar-width: thin;
+}
+#quiz-form .left-side::-webkit-scrollbar,
+#quiz-form .right-side::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: #E3F2FD;
+}
+#quiz-form .left-side::-webkit-scrollbar-thumb,
+#quiz-form .right-side::-webkit-scrollbar-thumb {
+    background-color: #2197F4;
+    border-radius: 0px;
+    transition: .2s;
+}
+#quiz-form .left-side::-webkit-scrollbar-thumb:hover,
+#quiz-form .right-side::-webkit-scrollbar-thumb:hover {background-color: #3D6DB5;}
+#quiz-form .left-side::-webkit-scrollbar-button:vertical:start:decrement,
+#quiz-form .left-side::-webkit-scrollbar-button:vertical:end:increment,
+#quiz-form .left-side::-webkit-scrollbar-button:horizontal:start:decrement,
+#quiz-form .left-side::-webkit-scrollbar-button:horizontal:end:increment,
+#quiz-form .right-side::-webkit-scrollbar-button:vertical:start:decrement,
+#quiz-form .right-side::-webkit-scrollbar-button:vertical:end:increment,
+#quiz-form .right-side::-webkit-scrollbar-button:horizontal:start:decrement,
+#quiz-form .right-side::-webkit-scrollbar-button:horizontal:end:increment {
+    display: none;
+}
+
+#quiz-form .left-side {
+    height: 100%;
+    overflow: auto;
+}
+#quiz-form .right-side {
+    height: 100%;
+    overflow: auto;
     background: linear-gradient(180deg, #E3F2FD 1.39%, rgba(227, 242, 253, 0.35) 100%);
     border-radius: 0px 10px 10px 0px;
 }
-#quiz-form .right .box {
+#quiz-form .right-side .box {
     background: #FFFFFF;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     font-weight: 300;
     padding: .5em;
+}
+@media (max-width: 767px){
+    #quiz-form {height: auto;}
+    #quiz-form h2, #quiz-form legend {
+        font-size: 1.75em;
+    }
+    #quiz-form .right-side {
+        border-radius: 10px 10px 0px 0px;
+        height: fit-content;
+    }
 }
 
 
@@ -70,14 +147,31 @@
     stroke-width: 2px;
     stroke-linecap: round;
     stroke-linejoin: round;
+    transition: .5s;
 }
+#quiz-slider .btn-prev:hover,
+#quiz-slider .btn-prev:focus {border: 1px solid #2197F4;}
+#quiz-slider .btn-prev:hover svg path, 
+#quiz-slider .btn-prev:focus svg path {stroke: #2197F4;}
+#quiz-slider .btn-prev:hover {border: 1px solid #3D6DB5;}
+#quiz-slider .btn-prev:active svg path {stroke: #3D6DB5;}
 #quiz-slider .btn-next {
+    text-decoration: none;
     height: 2.5em;
     padding: 0 3em;
     border-radius: 2.5em;
-    background: linear-gradient(90deg, rgba(13, 71, 161, 0.8) 0%, #2196F3 57.72%);
+    background-image: linear-gradient(to right, #2197F4 25%, #3D6DB5, #2197F4 75%);
+    background-size: 200% auto;
+    background-position: right center;
     color: #fff;
     font-weight: 500;
+    transition: .5s;
+}
+#quiz-slider .btn-next:hover, #quiz-slider .btn-next:focus {
+    background-position: left center;
+}
+#quiz-slider .btn-next:active{
+    background-position: center center;
 }
 
 
@@ -98,9 +192,36 @@
 }
 
 
+#quiz-form input, #quiz-form textarea {
+    border: none;
+    background-color: #f5f5f5;
+    border-radius: 0;
+    padding: .75em 1.5em;
+    width: 100%;
+    line-height: normal;
+    box-shadow: unset;
+}
+#quiz-form input:-moz-placeholder {color: #828282; font-weight: 400;}
+#quiz-form input::-moz-placeholder {color: #828282; font-weight: 400;}
+#quiz-form input::-webkit-input-placeholder {color: #828282; font-weight: 400;}
+#quiz-form input:-ms-input-placeholder {color: #828282; font-weight: 400;}
+#quiz-form input::-ms-input-placeholder {color: #828282; font-weight: 400;}
+#quiz-form input::placeholder {color: #828282; font-weight: 400;}
 #quiz-form input {
+    padding: .75em 1.5em;
+    width: 100%;
+    line-height: normal;
+    box-shadow: unset;
     background-color: transparent;
+}
+#quiz-form input.inp-1 {
+    border: none;
+    border-radius: 0;
     border-bottom: 2px solid #E0E0E0;
+}
+#quiz-form input.inp-2 {
+    border-radius: 10px;
+    border: 1px solid #E0E0E0;
 }
 
 #quiz-form .elem-1 {position: relative;}
@@ -130,8 +251,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: stretch;
-    /* position: relative;
-    z-index: 1; */
 }
 #quiz-form .elem-1 .visual-part>img {
     width: 5em;
@@ -157,4 +276,23 @@
     transform: translateY(-50%);
     z-index: 10;
 }
+@media (max-width: 1199px){
+    #quiz-form .elem-1 .visual-part {padding: .5em;}
+}
 
+#quiz-form .elem-2 .visual-part {
+    position: relative;
+    background-color: #fff;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1em;
+}
+#quiz-form .elem-2 .visual-part>img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+@media (max-width: 1199px){
+    #quiz-form .elem-2 .visual-part>img {height: 190px;}
+}
