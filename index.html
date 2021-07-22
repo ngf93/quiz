@@ -20,7 +20,7 @@
 
 	<!-- Modal -->
 	<div class="modal fade" id="quiz" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-dialog">
 			<div class="modal-content">
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
 					<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
@@ -29,280 +29,278 @@
 					</svg>						
 				</button>
 				<form action="" id="quiz-form">
-					<div class="row flex-column-reverse flex-md-row g-0 h-100">
-						<div class="left-side col-md-8 col-lg-9 py-4 py-lg-5 ps-4 ps-lg-5 pe-4">
-							<div id="quiz-slider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
-								<div class="carousel-inner">
-									<fildset class="carousel-item active">
-										<div class="indicators mb-4 mb-lg-5"></div>
-										<legend>Что вам нравится?</legend>
-										<div class="row gx-4 gy-3 row-cols-lg-2 mb-4 mb-lg-5 mt-4">
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<p>Вот вам яркий пример современных тенденций</p>
-														</div>
-													</div>
-													<input type="radio" name="question-1" value="answer1" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
-												</div>
-											</div>
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<p>Вот вам яркий пример современных тенденций</p>
-														</div>
-													</div>
-													<input type="radio" name="question-1" value="answer2" class="trans">
-												</div>
-											</div>
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae minus quam architecto. Voluptatem ab magni eveniet esse ducimus ut blanditiis necessitatibus non atque placeat, in nemo modi fugiat pariatur?</p>
-														</div>
-													</div>
-													<input type="radio" name="question-1" value="answer3" class="trans">
-												</div>
-											</div>
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<p>Вот вам яркий пример современных тенденций</p>
-														</div>
-													</div>
-													<input type="radio" name="question-1" value="answer4" class="trans">
-												</div>
-											</div>
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<p>Вот вам яркий пример современных тенденций</p>
-														</div>
-													</div>
-													<input type="radio" name="question-1" value="answer5" class="trans">
-												</div>
-											</div>
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<input type="text" class="inp-1" placeholder="Другое">
-														</div>
-													</div>
-													<input type="radio" name="question-1" value="another" class="trans">
-												</div>
-											</div>
-										</div>
-										<div class="d-flex justify-content-end align-items-center">
-											<!-- <button class="btn-prev" type="button" data-bs-target="#quiz-slider" data-bs-slide="prev">
-												<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-													<path d="M19 12H5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-													<path d="M12 19L5 12L12 5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-												</svg>												
-											</button> -->
-											<button class="btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
-												Далее
-											</button>
-										</div>
-									</fildset>
-									<fildset class="carousel-item">
-										<div class="indicators mb-4 mb-lg-5"></div>
-										<legend>Что вам нравится?</legend>
-										<div>Можно пропустить</div>
-										<div class="mb-4 mb-lg-5 mt-4">
-											<input type="text" class="inp-1" placeholder="Начните ввод...">
-										</div>
-										<div class="d-flex justify-content-end align-items-center">
-											<button class="btn-prev" type="button" data-bs-target="#quiz-slider" data-bs-slide="prev">
-												<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-													<path d="M19 12H5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-													<path d="M12 19L5 12L12 5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-												</svg>												
-											</button>
-											<button class="btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
-												Далее
-											</button>
-										</div>
-									</fildset>
-									<fildset class="carousel-item">
-										<div class="indicators mb-4 mb-lg-5"></div>
-										<legend>Что вам нравится?</legend>
-										<div>Выберите один или несколько</div>
-										<div class="row gx-4 gy-3 row-cols-lg-2 mb-4 mb-lg-5 mt-4">
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<p>Вот вам яркий пример современных тенденций</p>
-														</div>
-													</div>
-													<input type="checkbox" name="question-3" value="answer1" class="trans">
-												</div>
-											</div>
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<p>Вот вам яркий пример современных тенденций</p>
-														</div>
-													</div>
-													<input type="checkbox" name="question-3" value="answer2" class="trans">
-												</div>
-											</div>
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae minus quam architecto. Voluptatem ab magni eveniet esse ducimus ut blanditiis necessitatibus non atque placeat, in nemo modi fugiat pariatur?</p>
-														</div>
-													</div>
-													<input type="checkbox" name="question-3" value="answer3" class="trans">
-												</div>
-											</div>
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<p>Вот вам яркий пример современных тенденций</p>
-														</div>
-													</div>
-													<input type="checkbox" name="question-3" value="answer4" class="trans">
-												</div>
-											</div>
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<p>Вот вам яркий пример современных тенденций</p>
-														</div>
-													</div>
-													<input type="checkbox" name="question-3" value="answer5" class="trans">
-												</div>
-											</div>
-											<div>
-												<div class="elem-1">
-													<div class="visual-part">
-														<img src="img/photo.png" alt="">
-														<div>
-															<input type="text" class="inp-1" placeholder="Другое">
-														</div>
-													</div>
-													<input type="checkbox" name="question-3" value="another" class="trans">
-												</div>
-											</div>
-										</div>
-										<div class="d-flex justify-content-end align-items-center">
-											<button class="btn-prev" type="button" data-bs-target="#quiz-slider" data-bs-slide="prev">
-												<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-													<path d="M19 12H5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-													<path d="M12 19L5 12L12 5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-												</svg>												
-											</button>
-											<button class="btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
-												Далее
-											</button>
-										</div>
-									</fildset>
-									<fildset class="carousel-item">
-										<div class="indicators mb-4 mb-lg-5"></div>
-										<legend>Что вам нравится?</legend>
-										<div class="row g-4 row-cols-2 row-cols-lg-3 mb-4 mb-lg-5 mt-4">
-											<div>
-												<div class="elem-2">
-													<div class="visual-part">
-														<img src="img/img.jpg" alt="">
-														<input type="radio" name="question-4" value="answer1" class="trans">
-													</div>
+					<div class="left-side py-4 py-lg-5 ps-4 ps-lg-5 pe-4">
+						<div id="quiz-slider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="false" data-bs-wrap="false">
+							<div class="carousel-inner">
+								<fildset class="carousel-item active">
+									<div class="indicators mb-4 mb-lg-5"></div>
+									<legend>Что вам нравится?</legend>
+									<div class="row gx-3 gx-md-4 gy-3 row-cols-sm-2 row-cols-md-1 row-cols-lg-2 mb-4 mb-lg-5 mt-4">
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
 													<div>
 														<p>Вот вам яркий пример современных тенденций</p>
 													</div>
 												</div>
+												<input type="radio" name="question-1" value="answer1" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
-											<div>
-												<div class="elem-2">
-													<div class="visual-part">
-														<img src="img/img.jpg" alt="">
-														<input type="radio" name="question-4" value="answer2" class="trans">
-													</div>
+										</div>
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
 													<div>
 														<p>Вот вам яркий пример современных тенденций</p>
 													</div>
 												</div>
+												<input type="radio" name="question-1" value="answer2" class="trans">
 											</div>
-											<div>
-												<div class="elem-2">
-													<div class="visual-part">
-														<img src="img/img.jpg" alt="">
-														<input type="radio" name="question-4" value="answer3" class="trans">
+										</div>
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
+													<div>
+														<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae minus quam architecto. Voluptatem ab magni eveniet esse ducimus ut blanditiis necessitatibus non atque placeat, in nemo modi fugiat pariatur?</p>
 													</div>
+												</div>
+												<input type="radio" name="question-1" value="answer3" class="trans">
+											</div>
+										</div>
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
 													<div>
 														<p>Вот вам яркий пример современных тенденций</p>
 													</div>
 												</div>
+												<input type="radio" name="question-1" value="answer4" class="trans">
 											</div>
 										</div>
-										<div class="d-flex justify-content-end align-items-center">
-											<button class="btn-prev" type="button" data-bs-target="#quiz-slider" data-bs-slide="prev">
-												<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-													<path d="M19 12H5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-													<path d="M12 19L5 12L12 5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-												</svg>												
-											</button>
-											<button class="btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
-												Далее
-											</button>
-										</div>
-									</fildset>
-									<fildset class="carousel-item">
-										<div class="indicators mb-4 mb-lg-5"></div>
-										<legend>Как с Вами связаться?</legend>
-										<div class="row gx-4 gy-3 row-cols-lg-2 mb-4 mb-lg-5 mt-4">
-											<div>
-												<input type="text" class="inp-2 mb-3" placeholder="Ваше имя">
-												<input type="text" class="inp-2 mb-3" placeholder="Ваше имя">
-												<button type="button" class="btn-next mt-4" data-bs-target="#quiz-slider" data-bs-slide="next">Отправить</button>
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
+													<div>
+														<p>Вот вам яркий пример современных тенденций</p>
+													</div>
+												</div>
+												<input type="radio" name="question-1" value="answer5" class="trans">
 											</div>
 										</div>
-									</fildset>
-									<fildset class="carousel-item">
-										<div class="indicators mb-4 mb-lg-5"></div>
-										<legend>Спасибо за ответы!</legend>
-										<div class="f_15 fw_3 my-4 my-lg-5">Наши специалисты свяжутся с Вами в течение рабочего дня.</div>
-										<button type="button" class="btn-next" data-bs-dismiss="modal">Хорошо</button>
-									</fildset>
-								</div>
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
+													<div>
+														<input type="text" class="inp-1" placeholder="Другое">
+													</div>
+												</div>
+												<input type="radio" name="question-1" value="another" class="trans">
+											</div>
+										</div>
+									</div>
+									<div class="d-flex justify-content-end align-items-center">
+										<!-- <button class="btn-prev" type="button" data-bs-target="#quiz-slider" data-bs-slide="prev">
+											<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19 12H5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												<path d="M12 19L5 12L12 5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</button> -->
+										<button class="btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
+											Далее
+										</button>
+									</div>
+								</fildset>
+								<fildset class="carousel-item">
+									<div class="indicators mb-4 mb-lg-5"></div>
+									<legend>Что вам нравится?</legend>
+									<div>Можно пропустить</div>
+									<div class="mb-4 mb-lg-5 mt-4">
+										<input type="text" class="inp-1" placeholder="Начните ввод...">
+									</div>
+									<div class="d-flex justify-content-end align-items-center">
+										<button class="btn-prev" type="button" data-bs-target="#quiz-slider" data-bs-slide="prev">
+											<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19 12H5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												<path d="M12 19L5 12L12 5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</button>
+										<button class="btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
+											Далее
+										</button>
+									</div>
+								</fildset>
+								<fildset class="carousel-item">
+									<div class="indicators mb-4 mb-lg-5"></div>
+									<legend>Что вам нравится?</legend>
+									<div>Выберите один или несколько</div>
+									<div class="row gx-3 gx-md-4 gy-3 row-cols-sm-2 row-cols-md-1 row-cols-lg-2 mb-4 mb-lg-5 mt-4">
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
+													<div>
+														<p>Вот вам яркий пример современных тенденций</p>
+													</div>
+												</div>
+												<input type="checkbox" name="question-3" value="answer1" class="trans">
+											</div>
+										</div>
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
+													<div>
+														<p>Вот вам яркий пример современных тенденций</p>
+													</div>
+												</div>
+												<input type="checkbox" name="question-3" value="answer2" class="trans">
+											</div>
+										</div>
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
+													<div>
+														<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae minus quam architecto. Voluptatem ab magni eveniet esse ducimus ut blanditiis necessitatibus non atque placeat, in nemo modi fugiat pariatur?</p>
+													</div>
+												</div>
+												<input type="checkbox" name="question-3" value="answer3" class="trans">
+											</div>
+										</div>
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
+													<div>
+														<p>Вот вам яркий пример современных тенденций</p>
+													</div>
+												</div>
+												<input type="checkbox" name="question-3" value="answer4" class="trans">
+											</div>
+										</div>
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
+													<div>
+														<p>Вот вам яркий пример современных тенденций</p>
+													</div>
+												</div>
+												<input type="checkbox" name="question-3" value="answer5" class="trans">
+											</div>
+										</div>
+										<div>
+											<div class="elem-1">
+												<div class="visual-part">
+													<img src="img/photo.png" alt="">
+													<div>
+														<input type="text" class="inp-1" placeholder="Другое">
+													</div>
+												</div>
+												<input type="checkbox" name="question-3" value="another" class="trans">
+											</div>
+										</div>
+									</div>
+									<div class="d-flex justify-content-end align-items-center">
+										<button class="btn-prev" type="button" data-bs-target="#quiz-slider" data-bs-slide="prev">
+											<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19 12H5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												<path d="M12 19L5 12L12 5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</button>
+										<button class="btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
+											Далее
+										</button>
+									</div>
+								</fildset>
+								<fildset class="carousel-item">
+									<div class="indicators mb-4 mb-lg-5"></div>
+									<legend>Что вам нравится?</legend>
+									<div class="row g-3 g-md-4 row-cols-2 row-cols-sm-3 row-cols-md-2 row-cols-lg-3 mb-4 mb-lg-5 mt-4">
+										<div>
+											<div class="elem-2">
+												<div class="visual-part">
+													<img src="img/img.jpg" alt="">
+													<input type="radio" name="question-4" value="answer1" class="trans">
+												</div>
+												<div>
+													<p>Вот вам яркий пример современных тенденций</p>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="elem-2">
+												<div class="visual-part">
+													<img src="img/img.jpg" alt="">
+													<input type="radio" name="question-4" value="answer2" class="trans">
+												</div>
+												<div>
+													<p>Вот вам яркий пример современных тенденций</p>
+												</div>
+											</div>
+										</div>
+										<div>
+											<div class="elem-2">
+												<div class="visual-part">
+													<img src="img/img.jpg" alt="">
+													<input type="radio" name="question-4" value="answer3" class="trans">
+												</div>
+												<div>
+													<p>Вот вам яркий пример современных тенденций</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="d-flex justify-content-end align-items-center">
+										<button class="btn-prev" type="button" data-bs-target="#quiz-slider" data-bs-slide="prev">
+											<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19 12H5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+												<path d="M12 19L5 12L12 5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+											</svg>												
+										</button>
+										<button class="btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
+											Далее
+										</button>
+									</div>
+								</fildset>
+								<fildset class="carousel-item">
+									<div class="indicators mb-4 mb-lg-5"></div>
+									<legend>Как с Вами связаться?</legend>
+									<div class="row gx-4 gy-3 row-cols-lg-2 mb-4 mb-lg-5 mt-4">
+										<div>
+											<input type="text" class="inp-2 mb-3" placeholder="Ваше имя">
+											<input type="text" class="inp-2 mb-3" placeholder="Ваше имя">
+											<button type="button" class="btn-next mt-4" data-bs-target="#quiz-slider" data-bs-slide="next">Отправить</button>
+										</div>
+									</div>
+								</fildset>
+								<fildset class="carousel-item">
+									<div class="indicators mb-4 mb-lg-5"></div>
+									<legend>Спасибо за ответы!</legend>
+									<div class="f_15 fw_3 my-4 my-lg-5">Наши специалисты свяжутся с Вами в течение рабочего дня.</div>
+									<button type="button" class="btn-next" data-bs-dismiss="modal">Хорошо</button>
+								</fildset>
 							</div>
 						</div>
-						<div class="right-side col-md-4 col-lg-3 py-3 py-md-4 py-lg-5 px-4 d-flex flex-column justify-content-between">
-							<div class="mb-3 mb-md-4">
-								<div class="f_20 mb-3 mb-md-4 mb-lg-5">
-									<span class="fw_5"><span id="currentStep"></span> шаг</span> 
-									<span class="fw_3">из <span id="allSteps"></span></span>
-								</div>
-								<div class="f_15 fw_3">Пройдите тест и выберите подарок!</div>
+					</div>
+					<div class="right-side py-3 py-md-4 py-lg-5 px-4">
+						<div class="mb-3 mb-md-4">
+							<div class="f_20 mb-3 mb-md-4 mb-lg-5">
+								<span class="fw_5"><span id="currentStep"></span> шаг</span> 
+								<span class="fw_3">из <span id="allSteps"></span></span>
 							</div>
-							
-							<div>
-								<div class="mb-2">Подсказка:</div>
-								<div class="box">
-									<p>Если вы не нашли нужный вам вариант, просто выберите «другое» и напишите его сами</p>
-								</div>
+							<div class="f_15 fw_3">Пройдите тест и выберите подарок!</div>
+						</div>
+						
+						<div>
+							<div class="mb-2">Подсказка:</div>
+							<div class="box">
+								<p>Если вы не нашли нужный вам вариант, просто выберите «другое» и напишите его сами</p>
 							</div>
 						</div>
 					</div>
