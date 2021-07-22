@@ -333,3 +333,8 @@ SCROLL STYLIZATION
 @media (max-width: 575px){
     #quiz-form .elem-2 .visual-part>img {height: 42vw;}
 }
+
+.verifiable-btn:disabled {
+    opacity: .5;
+    pointer-events: none;
+}

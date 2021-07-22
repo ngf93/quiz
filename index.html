@@ -55,7 +55,7 @@
 														<p>Вот вам яркий пример современных тенденций</p>
 													</div>
 												</div>
-												<input type="radio" name="question-1" value="answer2" class="trans">
+												<input type="radio" name="question-1" value="answer2" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
 										</div>
 										<div>
@@ -66,7 +66,7 @@
 														<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae minus quam architecto. Voluptatem ab magni eveniet esse ducimus ut blanditiis necessitatibus non atque placeat, in nemo modi fugiat pariatur?</p>
 													</div>
 												</div>
-												<input type="radio" name="question-1" value="answer3" class="trans">
+												<input type="radio" name="question-1" value="answer3" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
 										</div>
 										<div>
@@ -77,7 +77,7 @@
 														<p>Вот вам яркий пример современных тенденций</p>
 													</div>
 												</div>
-												<input type="radio" name="question-1" value="answer4" class="trans">
+												<input type="radio" name="question-1" value="answer4" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
 										</div>
 										<div>
@@ -88,7 +88,7 @@
 														<p>Вот вам яркий пример современных тенденций</p>
 													</div>
 												</div>
-												<input type="radio" name="question-1" value="answer5" class="trans">
+												<input type="radio" name="question-1" value="answer5" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
 										</div>
 										<div>
@@ -96,10 +96,10 @@
 												<div class="visual-part">
 													<img src="img/photo.png" alt="">
 													<div>
-														<input type="text" class="inp-1" placeholder="Другое">
+														<input type="text" class="inp-1" placeholder="Другое" data-target="another-1" oninput="passValue(this); verifyInput(this.closest('fildset'));">
 													</div>
 												</div>
-												<input type="radio" name="question-1" value="another" class="trans">
+												<input type="radio" id="another-1" name="question-1" value="" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
 										</div>
 									</div>
@@ -110,7 +110,7 @@
 												<path d="M12 19L5 12L12 5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>												
 										</button> -->
-										<button class="btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
+										<button class="verifiable-btn btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
 											Далее
 										</button>
 									</div>
@@ -147,7 +147,7 @@
 														<p>Вот вам яркий пример современных тенденций</p>
 													</div>
 												</div>
-												<input type="checkbox" name="question-3" value="answer1" class="trans">
+												<input type="checkbox" name="question-3" value="answer1" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
 										</div>
 										<div>
@@ -158,7 +158,7 @@
 														<p>Вот вам яркий пример современных тенденций</p>
 													</div>
 												</div>
-												<input type="checkbox" name="question-3" value="answer2" class="trans">
+												<input type="checkbox" name="question-3" value="answer2" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
 										</div>
 										<div>
@@ -169,7 +169,7 @@
 														<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime vitae minus quam architecto. Voluptatem ab magni eveniet esse ducimus ut blanditiis necessitatibus non atque placeat, in nemo modi fugiat pariatur?</p>
 													</div>
 												</div>
-												<input type="checkbox" name="question-3" value="answer3" class="trans">
+												<input type="checkbox" name="question-3" value="answer3" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
 										</div>
 										<div>
@@ -180,7 +180,7 @@
 														<p>Вот вам яркий пример современных тенденций</p>
 													</div>
 												</div>
-												<input type="checkbox" name="question-3" value="answer4" class="trans">
+												<input type="checkbox" name="question-3" value="answer4" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
 										</div>
 										<div>
@@ -191,7 +191,7 @@
 														<p>Вот вам яркий пример современных тенденций</p>
 													</div>
 												</div>
-												<input type="checkbox" name="question-3" value="answer5" class="trans">
+												<input type="checkbox" name="question-3" value="answer5" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
 										</div>
 										<div>
@@ -199,10 +199,10 @@
 												<div class="visual-part">
 													<img src="img/photo.png" alt="">
 													<div>
-														<input type="text" class="inp-1" placeholder="Другое">
+														<input type="text" class="inp-1" placeholder="Другое" data-target="another-2" oninput="passValue(this); verifyInput(this.closest('fildset'));">
 													</div>
 												</div>
-												<input type="checkbox" name="question-3" value="another" class="trans">
+												<input type="checkbox" id="another-2" name="question-3" value="" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 											</div>
 										</div>
 									</div>
@@ -213,7 +213,7 @@
 												<path d="M12 19L5 12L12 5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>												
 										</button>
-										<button class="btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
+										<button class="verifiable-btn btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
 											Далее
 										</button>
 									</div>
@@ -226,7 +226,7 @@
 											<div class="elem-2">
 												<div class="visual-part">
 													<img src="img/img.jpg" alt="">
-													<input type="radio" name="question-4" value="answer1" class="trans">
+													<input type="radio" name="question-4" value="answer1" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 												</div>
 												<div>
 													<p>Вот вам яркий пример современных тенденций</p>
@@ -237,7 +237,7 @@
 											<div class="elem-2">
 												<div class="visual-part">
 													<img src="img/img.jpg" alt="">
-													<input type="radio" name="question-4" value="answer2" class="trans">
+													<input type="radio" name="question-4" value="answer2" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 												</div>
 												<div>
 													<p>Вот вам яркий пример современных тенденций</p>
@@ -248,7 +248,7 @@
 											<div class="elem-2">
 												<div class="visual-part">
 													<img src="img/img.jpg" alt="">
-													<input type="radio" name="question-4" value="answer3" class="trans">
+													<input type="radio" name="question-4" value="answer3" class="trans" required="" oninput="verifyInput(this.closest('fildset'));">
 												</div>
 												<div>
 													<p>Вот вам яркий пример современных тенденций</p>
@@ -263,7 +263,7 @@
 												<path d="M12 19L5 12L12 5" stroke="#4F4F4F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 											</svg>												
 										</button>
-										<button class="btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
+										<button class="verifiable-btn btn-next ms-4" type="button" data-bs-target="#quiz-slider" data-bs-slide="next">
 											Далее
 										</button>
 									</div>
@@ -273,9 +273,9 @@
 									<legend>Как с Вами связаться?</legend>
 									<div class="row gx-4 gy-3 row-cols-lg-2 mb-4 mb-lg-5 mt-4">
 										<div>
-											<input type="text" class="inp-2 mb-3" placeholder="Ваше имя">
-											<input type="text" class="inp-2 mb-3" placeholder="Ваше имя">
-											<button type="button" class="btn-next mt-4" data-bs-target="#quiz-slider" data-bs-slide="next">Отправить</button>
+											<input type="text" class="inp-2 mb-3" placeholder="Ваше имя" required="" oninput="verifyInput(this.closest('fildset'));">
+											<input type="text" class="inp-2 mb-3" placeholder="Ваше имя" required="" oninput="verifyInput(this.closest('fildset'));">
+											<button type="button" class="verifiable-btn btn-next mt-4" data-bs-target="#quiz-slider" data-bs-slide="next">Отправить</button>
 										</div>
 									</div>
 								</fildset>

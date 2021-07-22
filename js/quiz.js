@@ -1,6 +1,6 @@
 var modalQuiz = document.getElementById('quiz');
 modalQuiz.addEventListener('show.bs.modal', function (event) {
-    let arr_slides = Array.from(document.querySelectorAll('.carousel-item'));
+    let arr_slides = Array.from(this.querySelectorAll('.carousel-item'));
     let count = arr_slides.length;
 
     /* finding current page number */
@@ -35,6 +35,12 @@ modalQuiz.addEventListener('show.bs.modal', function (event) {
         indicator.innerHTML = elems.join(' ');
     });
 
+    let filds = Array.from(this.querySelectorAll('fildset'));
+    console.log('filds num ='+filds.length);
+    filds.forEach(function(item, i, arr) {
+      verifyInput(item);
+    });
+
     /* updating the page numbers of the slider when paging */
     modalQuiz.addEventListener('slid.bs.carousel', function () {
         document.getElementById('currentStep').innerHTML = findCurrent();
@@ -42,25 +48,46 @@ modalQuiz.addEventListener('show.bs.modal', function (event) {
 });
 
 
-/* проверка input-ов с атрибутом required и активация/блокировка кнопки submit */
-function verifyInput(form){
-    let arr_inputs = Array.from(form.querySelectorAll('input[required]'));
-    console.log(arr_inputs.length);
-  
-    function notNull(element, index, array) {
-      if(element.type == 'checkbox' && element.checked){
-        return element;
-      } else if(element.type == 'text' && element.value.trim() != '') {
-        return element;
-      }
-    }
-    let flag = arr_inputs.every(notNull);
-  
-    if (flag) {
+/* inputs verification if required & verifiable-btn activation/block */
+function verifyInput(fildset){
+  let requiredElems = Array.from(fildset.querySelectorAll('input[required]'));
+  console.log(requiredElems.length);
+
+  if(requiredElems.length == 0){
+    return;
+  } else {
+    let flag = requiredElems.every(notNull);
+
+    if (flag){
       console.log('все поля заполнены');
-      form.querySelector('button[type="submit"]').removeAttribute('disabled');
+      fildset.querySelector('.verifiable-btn').removeAttribute('disabled');
     } else {
       console.log('есть не заполненые поля');
-      form.querySelector('button[type="submit"]').setAttribute('disabled', 'disabled');
+      fildset.querySelector('.verifiable-btn').setAttribute('disabled', 'disabled');
     }
   }
+
+  function notNull(element, index, array) {
+    if(element.type == 'radio' || element.type == 'checkbox'){
+      let name = element.name;
+      console.log(name);
+      let arrBtns = Array.from(fildset.querySelectorAll('input[name="'+name+'"]'));
+      console.log(arrBtns.some(isChecked));
+      if(arrBtns.some(isChecked)){return element;}
+    } else if (element.type == 'text' && element.value.trim() != ''){
+      return element;
+    }
+  }
+
+  function isChecked(el){
+    console.log('value = '+el.value.trim());
+    if(el.checked && el.value.trim() != ''){
+      return el;
+    }
+  }
+}
+
+/* passing a value from one input to another */
+function passValue(inp){
+  document.getElementById(inp.dataset.target).value=inp.value;
+}
