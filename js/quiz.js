@@ -90,4 +90,5 @@ function verifyInput(fildset){
 /* passing a value from one input to another */
 function passValue(inp){
   document.getElementById(inp.dataset.target).value=inp.value;
+  document.getElementById(inp.dataset.target).checked = true;
 }
